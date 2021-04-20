@@ -38,5 +38,32 @@ $(document).ready(function () {
         items: 3,
       }
     }
-  })
+  });
+
+  /*------- Screenshots Carousel -------*/
+  $('.screenshots-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    autoplay: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 4,
+      }
+    }
+  });
+
+  // 'window.webkitStorageInfo' is deprecated 
+  var myObject = {};
+  var mySecondReference = myObject;
+
+  for (s in window)
+    if (!/webkitStorageInfo|webkitIndexedDB/.test(s) && window[s] === myObject)
+      alert("reference found: " + s);
 })
