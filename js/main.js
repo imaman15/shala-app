@@ -59,6 +59,25 @@ $(document).ready(function () {
     }
   });
 
+  /*------- Testimonials Carousel -------*/
+  $('.testimonials-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    autoplay: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      }
+    }
+  });
+
   // 'window.webkitStorageInfo' is deprecated 
   var myObject = {};
   var mySecondReference = myObject;
@@ -66,4 +85,4 @@ $(document).ready(function () {
   for (s in window)
     if (!/webkitStorageInfo|webkitIndexedDB/.test(s) && window[s] === myObject)
       alert("reference found: " + s);
-})
+});
