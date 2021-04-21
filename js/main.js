@@ -97,6 +97,11 @@ $(document).ready(function () {
     }
   });
 
+  /*------- Page Scrolling - ScrollIt -------*/
+  $.scrollIt({
+    topOffset: -50
+  });
+
   // 'window.webkitStorageInfo' is deprecated 
   var myObject = {};
   var mySecondReference = myObject;
