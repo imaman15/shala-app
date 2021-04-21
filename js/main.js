@@ -1,3 +1,7 @@
+$(window).on("load", function () {
+  $(".preloader").fadeOut("slow");
+})
+
 $(document).ready(function () {
   /*------- Navbar Shrink -------*/
   $(window).on("scroll", function () {
@@ -126,8 +130,8 @@ $(document).ready(function () {
       localStorage.setItem("shala-theme", "dark");
     } else {
       localStorage.setItem("shala-theme", "light");
-      updateIcon();
     }
+    updateIcon();
   })
 
   function updateIcon() {
